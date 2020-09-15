@@ -2,12 +2,19 @@ import React from 'react';
 import PetDetailPage from './PetDetailPage.js';
 
 
-function App() {
+function App(props) {
+  // if (!props.pet) {
+  //   return null
+  // }
   return (
-    <PetDetailPage>
+    <PetDetailPage pet={props.pet} />
 
-    </PetDetailPage>
+
   );
+}
+
+App.defaultProps = {
+  pet: {}
 }
 
 export default App;
